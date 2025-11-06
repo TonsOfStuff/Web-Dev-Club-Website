@@ -1,0 +1,136 @@
+:root{
+    font-family: "Cascadia Code", sans-serif;
+    --blackcolor: #001011;
+    --fontColor: #F9F9F9;
+
+    background-color: var(--blackcolor);
+    color: var(--fontColor)
+}
+
+body{
+    margin: 0px;
+}
+
+
+
+
+#mainHeader {
+    height: 100%;
+    width: calc(100% - 60px + 16px);
+    padding: 30px;
+
+    top:0;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+
+    font-size: 30px;
+
+    background-color: #001011d0;
+    transition: all 0.3s ease-in-out; /* Apply transition to all changing properties */
+}
+
+#mainHeader::after{
+  content: "";
+  width: 0px;
+  transform: translate(0px, 34px);
+  height: 1px;
+
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+#mainHeader.scrolled {
+  background-color: var(--blackcolor);
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+#mainHeader.scrolled::after{
+  content: "";
+  width: 100%;
+  transform: translate(0px, 34px);
+  height: 1px;
+  background-color: white;
+
+  transition: width 1s ease, background-color 1s ease;
+}
+
+#mainHeader.scrolled #Logo{
+  font-size: 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+header a{
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+header a:hover{
+    color: gray;;
+}
+
+header a:hover::after{
+    width: 100%;
+}
+
+header a::after{
+    content:" ";
+    display: block;
+    height: 1px;
+    width: 18px;
+
+    background-color: aquamarine;
+    transition: all 0.3s ease-in-out;
+}
+
+nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+main{
+    margin-top: 30px;
+}
+
+.starterImg {
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.imgScrolled{
+    height: 0px;
+    width: 100vw;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#Logo{
+    font-size: 110px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.chunk{
+    min-height: 1000px;
+}
+
+
+/*Home Page Stuff*/
+#story1{
+    margin-bottom: 200px;
+}
