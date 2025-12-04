@@ -16,3 +16,10 @@ window.addEventListener('scroll', function () {
     document.getElementById("filler").style.display = "block"
   }
 });
+
+
+const formButton = document.getElementById("formButton");
+formButton.addEventListener("click", () => {
+  console.log("sad")
+  window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfN_CXZKR1Fs__wsTfVA0vrhpv4F2Inl8bFhBiZOYWfZpnG9A/viewform?usp=header";
+})
