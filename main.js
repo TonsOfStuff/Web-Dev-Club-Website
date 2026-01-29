@@ -14,6 +14,9 @@ window.addEventListener('scroll', function () {
 
     document.querySelector("article").style.display = "none"
     document.getElementById("filler").style.display = "block"
+
+    const chunks = document.querySelectorAll(".chunk");
+    chunks.forEach((element) => element.classList.remove("shownItem"));
   }
 });
 
@@ -23,3 +26,14 @@ formButton.addEventListener("click", () => {
   console.log("sad")
   window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfN_CXZKR1Fs__wsTfVA0vrhpv4F2Inl8bFhBiZOYWfZpnG9A/viewform?usp=header";
 })
+
+//Scroll and show item code
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add("shownItem");
+      }
+  })
+});
+const chunks = document.querySelectorAll(".chunk");
+chunks.forEach((element) => observer.observe(element));
