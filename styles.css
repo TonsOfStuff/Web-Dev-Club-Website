@@ -157,6 +157,10 @@ main{
 
 
 /*Home Page Stuff*/
+article{
+    display: none;
+}
+
 p{
     font-size: 20px;
 }
@@ -220,6 +224,10 @@ button{
     background-color: #74B3DA;
 }
 
+#formButton:active{
+    background-color: #4692c5;
+}
+
 
 /*Non Main Page CSS*/
 #nonMainPage{
@@ -247,6 +255,19 @@ button{
 
 
 /*Responsive Design*/
+@media screen and (max-width: 768px) {
+    .starterImg{
+        height: 108.3vh;
+        position: absolute;
+        width: 100%;
+    }
+
+    #mainHeader{
+        height: 100vh;
+        position: relative;
+    }
+}
+
 
 @media screen and (max-width: 1384px) {
     nav{
@@ -255,6 +276,21 @@ button{
 }
 
 @media screen and (max-width: 848px) {
+    article{
+        display: block;
+    }
+
+    .starterImg{
+        height: 108.3vh;
+        position: absolute;
+        width: 100%;
+    }
+
+    #mainHeader{
+        height: 100vh;
+        position: relative;
+    }
+    
     nav{
         flex-direction: column;
         width: auto;
@@ -312,4 +348,29 @@ button{
         justify-content: center;
 
     }
+
+    #mainHeader.scrolled {
+        background-color: var(--blackcolor);
+        height: 50px;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    #mainHeader.scrolled::after{
+        content: "";
+        width: 100%;
+        transform: translate(0px, 34px);
+        height: 1px;
+        background-color: white;
+
+        transition: width 1s ease, background-color 1s ease;
+    }
+
+    #mainHeader.scrolled #Logo{
+        font-size: 0px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    
 }
+
