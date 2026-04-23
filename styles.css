@@ -243,19 +243,37 @@ button{
 #slideSlant{
     position: absolute;
 
-    width: 500px;
-    height: 500px;
+    width: 0px;
+    height: 700px;
 
     rotate: 30deg;
-    transform: translate(-450px, -100px);
+    transform: translate(-300px, -300px);
 
-    background-color: #ebebd354;
-    transition: transform 0.5s ease-in-out;
+    background-color: #ffffff54;
+    transition: width 0.5s ease-in-out;
 }
 
-#formButton:hover + #slideSlant{
-    transform: translate(-130px, -130px);
-    transition: transform 0.5s ease-in-out;
+#slideSlant1{
+    position: absolute;
+
+    width: 0px;
+    height: 700px;
+
+    rotate: 30deg;
+    transform: translate(-300px, -300px);
+
+    background-color: #58585854;
+    transition: width 0.85s ease-in-out;
+}
+
+#buttonContainer:hover #slideSlant{
+    transition: width 0.85s ease-in-out;
+    width: 500px;
+}
+
+#buttonContainer:hover #slideSlant1{
+    transition: width 0.5s ease-in-out;
+    width: 500px;
 }
 
 #formButton:active{
